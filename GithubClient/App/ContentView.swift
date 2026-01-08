@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(AppState.self) var appState
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            switch appState.flow {
+            case .login:
+                Text("Login Flow")
+            case .main:
+                Text("Main Flow")
+            }
         }
         .padding()
     }
@@ -21,4 +25,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(AppState())
 }

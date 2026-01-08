@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GithubClientApp: App {
+    @State var appState: AppState = .init()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appState)
         }
     }
 }

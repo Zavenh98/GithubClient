@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="git_gradient_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Xnw-Po-iTZ">
-                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <rect key="frame" x="156.66666666666666" y="386" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xnw-Po-iTZ" secondAttribute="height" id="RjU-N6-VA4"/>
-                                    <constraint firstAttribute="width" constant="100" id="xjn-yw-usZ"/>
+                                    <constraint firstAttribute="width" constant="80" id="xjn-yw-usZ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
