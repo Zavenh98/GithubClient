@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            switch appState.flow {
+            switch appState.appFlow {
             case .login:
                 Text("Login Flow")
             case .main:

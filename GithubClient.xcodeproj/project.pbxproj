@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0C63A162F09811C0092621B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A152F09811C0092621B /* AppState.swift */; };
 		A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A192F09821B0092621B /* AppFlow.swift */; };
+		A0C63A372F106CA10092621B /* KeychainAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A362F106CA10092621B /* KeychainAuthManager.swift */; };
 		A0C829E12F0491560080DF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C829DE2F0491560080DF4A /* ContentView.swift */; };
 		A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C829DF2F0491560080DF4A /* GithubClientApp.swift */; };
 		A0C829E32F0491560080DF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C829DD2F0491560080DF4A /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		A0C63A152F09811C0092621B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A0C63A192F09821B0092621B /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		A0C63A362F106CA10092621B /* KeychainAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAuthManager.swift; sourceTree = "<group>"; };
 		A0C829DD2F0491560080DF4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0C829DE2F0491560080DF4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0C829DF2F0491560080DF4A /* GithubClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubClientApp.swift; sourceTree = "<group>"; };
@@ -83,10 +85,19 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		A0C63A352F106C850092621B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A0C63A362F106CA10092621B /* KeychainAuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		A0C829E02F0491560080DF4A /* GithubClient */ = {
 			isa = PBXGroup;
 			children = (
 				A0C63A172F0981570092621B /* App */,
+				A0C63A352F106C850092621B /* Managers */,
 				A0C63A1D2F09A3200092621B /* Scene */,
 				A0C829E62F0493310080DF4A /* Resources */,
 			);
@@ -197,6 +208,7 @@
 				A0C63A162F09811C0092621B /* AppState.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
 				A0C829E12F0491560080DF4A /* ContentView.swift in Sources */,
+				A0C63A372F106CA10092621B /* KeychainAuthManager.swift in Sources */,
 				A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

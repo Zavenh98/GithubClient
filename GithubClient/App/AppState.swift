@@ -9,9 +9,9 @@ import Foundation
 
 @Observable
 final class AppState {
-    var flow: AppFlow
+    var appFlow: AppFlow
     
     init() {
-        self.flow = .login
+        self.appFlow = KeychainAuthManager.shared.isAuthenticated ? .main : .login
     }
 }
