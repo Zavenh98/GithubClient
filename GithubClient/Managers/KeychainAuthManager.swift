@@ -18,13 +18,7 @@ final class KeychainAuthManager {
     private init() {}
     
     var isAuthenticated: Bool {
-        do {
-            try getCredentials()
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
+        (try? getCredentials()) != nil
     }
     
     func setCredentials(credentials: Credentials) throws {
@@ -44,7 +38,7 @@ final class KeychainAuthManager {
         print("Keychain item saved successfully")
     }
     
-    func getCredentials() throws {
+    func getCredentials() throws -> Credentials {
         // TODO: - Remove unnecessary attributes if needed
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrService as String: service,
@@ -57,7 +51,16 @@ final class KeychainAuthManager {
         guard status == errSecSuccess else {
             throw convertError(status)
         }
+        
+        guard let dictionary = item as? [String: Any],
+              let login = dictionary[kSecAttrAccount as String] as? String,
+              let passwordData = dictionary[kSecValueData as String] as? Data,
+              let password = String(data: passwordData, encoding: .utf8)
+        else {
+            throw KeychainError.invalidData
+        }
         print("Keychain item recived successfully")
+        return Credentials(login: login, token: password)
     }
     
     func deleteCredentials() throws {

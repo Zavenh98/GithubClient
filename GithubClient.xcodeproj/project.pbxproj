@@ -49,7 +49,6 @@
 				A0C63A152F09811C0092621B /* AppState.swift */,
 				A0C829DE2F0491560080DF4A /* ContentView.swift */,
 				A0C829DF2F0491560080DF4A /* GithubClientApp.swift */,
-				A0C829E72F0493A20080DF4A /* Launch Screen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -107,6 +106,7 @@
 		A0C829E62F0493310080DF4A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0C829E72F0493A20080DF4A /* Launch Screen.storyboard */,
 				A0C829E42F0491820080DF4A /* AppIcon.icon */,
 				A0C829DD2F0491560080DF4A /* Assets.xcassets */,
 				A0C829E92F0495E30080DF4A /* Colors.xcassets */,
