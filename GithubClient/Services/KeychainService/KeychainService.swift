@@ -1,5 +1,5 @@
 //
-//  KeychainAuthManager.swift
+//  KeychainService.swift
 //  GithubClient
 //
 //  Created by Zaven Hovhannisyan on 09.01.26.
@@ -7,15 +7,8 @@
 
 import Foundation
 
-struct Credentials {
-    let login: String
-    let token: String
-}
-
-final class KeychainAuthManager {
-    static let shared = KeychainAuthManager()
-    private let service = "com.githubclient.auth.credentials"
-    private init() {}
+final class KeychainService: KeychainServiceProtocol {
+    private let service = "githubclient.auth.credentials"
     
     var isAuthenticated: Bool {
         (try? getCredentials()) != nil
@@ -83,28 +76,5 @@ final class KeychainAuthManager {
        default:
           return .unexpectedError(status: status)
        }
-    }
-}
-
-// MARK: - Keychain Error
-extension KeychainAuthManager {
-    enum KeychainError: LocalizedError {
-        case invalidData
-        case itemNotFound
-        case duplicateItem
-        case unexpectedError(status: OSStatus)
-        
-        var errorDescription: String? {
-            switch self {
-            case .invalidData:
-                return "Invalid data for keychain"
-            case .itemNotFound:
-                return "Keychain item not found"
-            case .duplicateItem:
-                return "Keychain item already exist"
-            case .unexpectedError(let status):
-                return "Unexpected keychain error - \(status)"
-            }
-        }
     }
 }
