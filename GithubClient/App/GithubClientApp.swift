@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct GithubClientApp: App {
-    private let keychainService = KeychainService()
+    private let keychainManager = KeychainManager()
     @State private var appState: AppState
 
     init() {
-        _appState = State(initialValue: AppState(keychainService: keychainService))
+        _appState = State(initialValue: AppState(keychainManager: keychainManager))
     }
     
     var body: some Scene {

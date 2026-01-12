@@ -25,5 +25,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environment(AppState(keychainService: KeychainService()))
+        .environment(AppState(keychainManager: KeychainManager()))
 }
