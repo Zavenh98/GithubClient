@@ -1,5 +1,5 @@
 //
-//  KeychainService.swift
+//  KeychainManager.swift
 //  GithubClient
 //
 //  Created by Zaven Hovhannisyan on 09.01.26.
@@ -7,12 +7,8 @@
 
 import Foundation
 
-final class KeychainService: KeychainServiceProtocol {
+final class KeychainManager: KeychainManagerInput {
     private let service = "githubclient.auth.credentials"
-    
-    var isAuthenticated: Bool {
-        (try? getCredentials()) != nil
-    }
     
     func setCredentials(credentials: Credentials) throws {
         try? deleteCredentials()
