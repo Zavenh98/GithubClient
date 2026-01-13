@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */; };
+		A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */; };
+		A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */; };
+		A07C30E02F15B40800720BA1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DF2F15B40800720BA1 /* NetworkManager.swift */; };
+		A07C30E22F15B45D00720BA1 /* ReachabilityManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30E12F15B45D00720BA1 /* ReachabilityManagerInput.swift */; };
+		A07C30E42F15B47000720BA1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30E32F15B47000720BA1 /* ReachabilityManager.swift */; };
+		A07C30E82F15B61600720BA1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30E72F15B61600720BA1 /* NetworkError.swift */; };
+		A07C30EA2F15C04400720BA1 /* NetworkManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30E92F15C04400720BA1 /* NetworkManager+Ext.swift */; };
 		A0C63A162F09811C0092621B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A152F09811C0092621B /* AppState.swift */; };
 		A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A192F09821B0092621B /* AppFlow.swift */; };
-		A0C63A372F106CA10092621B /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A362F106CA10092621B /* KeychainService.swift */; };
-		A0C63AE82F12B1160092621B /* KeychainServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63AE72F12B1160092621B /* KeychainServiceProtocol.swift */; };
+		A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A362F106CA10092621B /* KeychainManager.swift */; };
+		A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63AE72F12B1160092621B /* KeychainManagerInput.swift */; };
 		A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63AE92F12B1F50092621B /* Credentials.swift */; };
 		A0C63AEC2F12B2800092621B /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63AEB2F12B2800092621B /* KeychainError.swift */; };
 		A0C829E12F0491560080DF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C829DE2F0491560080DF4A /* ContentView.swift */; };
@@ -22,10 +30,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Ext.swift"; sourceTree = "<group>"; };
+		A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerInput.swift; sourceTree = "<group>"; };
+		A07C30DF2F15B40800720BA1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A07C30E12F15B45D00720BA1 /* ReachabilityManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManagerInput.swift; sourceTree = "<group>"; };
+		A07C30E32F15B47000720BA1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		A07C30E72F15B61600720BA1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A07C30E92F15C04400720BA1 /* NetworkManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Ext.swift"; sourceTree = "<group>"; };
 		A0C63A152F09811C0092621B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A0C63A192F09821B0092621B /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
-		A0C63A362F106CA10092621B /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
-		A0C63AE72F12B1160092621B /* KeychainServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceProtocol.swift; sourceTree = "<group>"; };
+		A0C63A362F106CA10092621B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		A0C63AE72F12B1160092621B /* KeychainManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManagerInput.swift; sourceTree = "<group>"; };
 		A0C63AE92F12B1F50092621B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		A0C63AEB2F12B2800092621B /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		A0C829DD2F0491560080DF4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +64,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A07C30D42F15B13400720BA1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A07C30D52F15B16100720BA1 /* NetworkRequest */,
+				A07C30D82F15B1AD00720BA1 /* NetworkManager */,
+				A07C30D72F15B18800720BA1 /* ReachabilityManager */,
+				A07C30D62F15B16D00720BA1 /* Utils */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A07C30D52F15B16100720BA1 /* NetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */,
+				A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */,
+			);
+			path = NetworkRequest;
+			sourceTree = "<group>";
+		};
+		A07C30D62F15B16D00720BA1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A07C30E72F15B61600720BA1 /* NetworkError.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A07C30D72F15B18800720BA1 /* ReachabilityManager */ = {
+			isa = PBXGroup;
+			children = (
+				A07C30E12F15B45D00720BA1 /* ReachabilityManagerInput.swift */,
+				A07C30E32F15B47000720BA1 /* ReachabilityManager.swift */,
+			);
+			path = ReachabilityManager;
+			sourceTree = "<group>";
+		};
+		A07C30D82F15B1AD00720BA1 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */,
+				A07C30DF2F15B40800720BA1 /* NetworkManager.swift */,
+				A07C30E92F15C04400720BA1 /* NetworkManager+Ext.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		A0C63A172F0981570092621B /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,19 +157,20 @@
 		A0C63A352F106C850092621B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A0C63AE62F12B0FE0092621B /* KeychainService */,
+				A0C63AE62F12B0FE0092621B /* KeychainManager */,
+				A07C30D42F15B13400720BA1 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A0C63AE62F12B0FE0092621B /* KeychainService */ = {
+		A0C63AE62F12B0FE0092621B /* KeychainManager */ = {
 			isa = PBXGroup;
 			children = (
-				A0C63AE72F12B1160092621B /* KeychainServiceProtocol.swift */,
-				A0C63A362F106CA10092621B /* KeychainService.swift */,
+				A0C63AE72F12B1160092621B /* KeychainManagerInput.swift */,
+				A0C63A362F106CA10092621B /* KeychainManager.swift */,
 				A0C63AEB2F12B2800092621B /* KeychainError.swift */,
 			);
-			path = KeychainService;
+			path = KeychainManager;
 			sourceTree = "<group>";
 		};
 		A0C829E02F0491560080DF4A /* GithubClient */ = {
@@ -222,14 +286,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07C30E02F15B40800720BA1 /* NetworkManager.swift in Sources */,
 				A0C63A162F09811C0092621B /* AppState.swift in Sources */,
+				A07C30E42F15B47000720BA1 /* ReachabilityManager.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
+				A07C30EA2F15C04400720BA1 /* NetworkManager+Ext.swift in Sources */,
+				A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */,
 				A0C829E12F0491560080DF4A /* ContentView.swift in Sources */,
 				A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */,
+				A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */,
 				A0C63AEC2F12B2800092621B /* KeychainError.swift in Sources */,
-				A0C63AE82F12B1160092621B /* KeychainServiceProtocol.swift in Sources */,
-				A0C63A372F106CA10092621B /* KeychainService.swift in Sources */,
+				A07C30E82F15B61600720BA1 /* NetworkError.swift in Sources */,
+				A07C30E22F15B45D00720BA1 /* ReachabilityManagerInput.swift in Sources */,
+				A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */,
+				A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */,
 				A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */,
+				A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
