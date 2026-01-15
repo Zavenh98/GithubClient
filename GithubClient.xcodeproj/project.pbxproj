@@ -11,6 +11,11 @@
 		A0387B062F18554B007F9146 /* ReachabilityManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B052F18554B007F9146 /* ReachabilityManagerInput.swift */; };
 		A0387B092F18559C007F9146 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B082F18559C007F9146 /* ReachabilityManager.swift */; };
 		A0387B0B2F1862EC007F9146 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B0A2F1862EC007F9146 /* AppEnvironment.swift */; };
+		A0387B372F18BF3C007F9146 /* MainFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B362F18BF3C007F9146 /* MainFlowView.swift */; };
+		A0387B3A2F18BF78007F9146 /* MyRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B392F18BF78007F9146 /* MyRepositoriesView.swift */; };
+		A0387B3F2F18C012007F9146 /* AllUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B3E2F18C012007F9146 /* AllUsersView.swift */; };
+		A0387B412F18C02E007F9146 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B402F18C02E007F9146 /* MusicPlayerView.swift */; };
+		A0387B432F18C03C007F9146 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B422F18C03C007F9146 /* ProfileView.swift */; };
 		A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */; };
 		A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */; };
 		A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */; };
@@ -41,6 +46,11 @@
 		A0387B052F18554B007F9146 /* ReachabilityManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManagerInput.swift; sourceTree = "<group>"; };
 		A0387B082F18559C007F9146 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		A0387B0A2F1862EC007F9146 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		A0387B362F18BF3C007F9146 /* MainFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowView.swift; sourceTree = "<group>"; };
+		A0387B392F18BF78007F9146 /* MyRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesView.swift; sourceTree = "<group>"; };
+		A0387B3E2F18C012007F9146 /* AllUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersView.swift; sourceTree = "<group>"; };
+		A0387B402F18C02E007F9146 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		A0387B422F18C03C007F9146 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Ext.swift"; sourceTree = "<group>"; };
 		A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerInput.swift; sourceTree = "<group>"; };
@@ -119,6 +129,38 @@
 				A0387B082F18559C007F9146 /* ReachabilityManager.swift */,
 			);
 			path = ReachabilityManager;
+			sourceTree = "<group>";
+		};
+		A0387B382F18BF46007F9146 /* MyRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B392F18BF78007F9146 /* MyRepositoriesView.swift */,
+			);
+			path = MyRepositories;
+			sourceTree = "<group>";
+		};
+		A0387B3B2F18BFA3007F9146 /* AllUsers */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B3E2F18C012007F9146 /* AllUsersView.swift */,
+			);
+			path = AllUsers;
+			sourceTree = "<group>";
+		};
+		A0387B3C2F18BFB4007F9146 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B402F18C02E007F9146 /* MusicPlayerView.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		A0387B3D2F18BFC4007F9146 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B422F18C03C007F9146 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A07C30D42F15B13400720BA1 /* Networking */ = {
@@ -211,6 +253,11 @@
 		A0C63A1F2F09A3450092621B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A0387B362F18BF3C007F9146 /* MainFlowView.swift */,
+				A0387B382F18BF46007F9146 /* MyRepositories */,
+				A0387B3B2F18BFA3007F9146 /* AllUsers */,
+				A0387B3C2F18BFB4007F9146 /* MusicPlayer */,
+				A0387B3D2F18BFC4007F9146 /* Profile */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -349,8 +396,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07C30EE2F15DEE300720BA1 /* LoginViewController.swift in Sources */,
+				A0387B432F18C03C007F9146 /* ProfileView.swift in Sources */,
 				A07C30E02F15B40800720BA1 /* NetworkManager.swift in Sources */,
 				A0C63A162F09811C0092621B /* AppState.swift in Sources */,
+				A0387B372F18BF3C007F9146 /* MainFlowView.swift in Sources */,
 				A0387AFE2F18067F007F9146 /* UIKitLoadingView.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
 				A07C30EA2F15C04400720BA1 /* NetworkManager+Ext.swift in Sources */,
@@ -359,6 +408,7 @@
 				A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */,
 				A0387B062F18554B007F9146 /* ReachabilityManagerInput.swift in Sources */,
 				A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */,
+				A0387B3A2F18BF78007F9146 /* MyRepositoriesView.swift in Sources */,
 				A0387B092F18559C007F9146 /* ReachabilityManager.swift in Sources */,
 				A0C63AEC2F12B2800092621B /* KeychainError.swift in Sources */,
 				A07C30EC2F15DE5200720BA1 /* LoginViewModel.swift in Sources */,
@@ -367,8 +417,10 @@
 				A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */,
 				A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */,
 				A07C30F52F15E3AA00720BA1 /* AuthorizationManager.swift in Sources */,
+				A0387B412F18C02E007F9146 /* MusicPlayerView.swift in Sources */,
 				A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */,
 				A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */,
+				A0387B3F2F18C012007F9146 /* AllUsersView.swift in Sources */,
 				A0387B0B2F1862EC007F9146 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

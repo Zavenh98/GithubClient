@@ -11,20 +11,14 @@ struct ContentView: View {
     @Environment(AppState.self) var appState
     
     var body: some View {
-        return ZStack {
+        ZStack {
             switch appState.appFlow {
             case .login:
                 LoginContainerView(
                     onLoginSuccess: { appState.appFlow = .main } )
             case .main:
-                ZStack {
-                    Color(.gray.opacity(0.2))
-                    
-                    Button("Logout") {
-                        appState.appFlow = .login
-                    }
-                }
-                .transition(.move(edge: .trailing))
+                MainFlowView()
+                    .transition(.move(edge: .trailing))
             }
         }
         .background(.bgPrimary)
