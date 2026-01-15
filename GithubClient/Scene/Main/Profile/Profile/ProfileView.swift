@@ -42,6 +42,7 @@ struct ProfileView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(.bgPrimary)
             .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 viewModel.appState = self.appState
             }
@@ -53,6 +54,15 @@ struct ProfileView: View {
             }, message: {
                 Text("All your cached data will be deleted when you log out.")
             })
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
         }
     }
 }

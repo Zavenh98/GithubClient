@@ -17,6 +17,8 @@
 		A0387B412F18C02E007F9146 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B402F18C02E007F9146 /* MusicPlayerView.swift */; };
 		A0387B432F18C03C007F9146 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B422F18C03C007F9146 /* ProfileView.swift */; };
 		A0387B492F18CAF8007F9146 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B482F18CAF8007F9146 /* ProfileViewModel.swift */; };
+		A0387B4D2F18D7FE007F9146 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B4C2F18D7FE007F9146 /* SettingsView.swift */; };
+		A0387B4F2F18D894007F9146 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0387B4E2F18D894007F9146 /* AppTheme.swift */; };
 		A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */; };
 		A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */; };
 		A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */; };
@@ -53,6 +55,8 @@
 		A0387B402F18C02E007F9146 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		A0387B422F18C03C007F9146 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A0387B482F18CAF8007F9146 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A0387B4C2F18D7FE007F9146 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A0387B4E2F18D894007F9146 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Ext.swift"; sourceTree = "<group>"; };
 		A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerInput.swift; sourceTree = "<group>"; };
@@ -160,10 +164,27 @@
 		A0387B3D2F18BFC4007F9146 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A0387B422F18C03C007F9146 /* ProfileView.swift */,
-				A0387B482F18CAF8007F9146 /* ProfileViewModel.swift */,
+				A0387B4A2F18D7A3007F9146 /* Profile */,
+				A0387B4B2F18D7D8007F9146 /* Settings */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A0387B4A2F18D7A3007F9146 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B482F18CAF8007F9146 /* ProfileViewModel.swift */,
+				A0387B422F18C03C007F9146 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A0387B4B2F18D7D8007F9146 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B4C2F18D7FE007F9146 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A07C30D42F15B13400720BA1 /* Networking */ = {
@@ -230,6 +251,7 @@
 			children = (
 				A0C63A192F09821B0092621B /* AppFlow.swift */,
 				A0C63AE92F12B1F50092621B /* Credentials.swift */,
+				A0387B4E2F18D894007F9146 /* AppTheme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +429,7 @@
 				A0387B492F18CAF8007F9146 /* ProfileViewModel.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
 				A07C30EA2F15C04400720BA1 /* NetworkManager+Ext.swift in Sources */,
+				A0387B4F2F18D894007F9146 /* AppTheme.swift in Sources */,
 				A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */,
 				A0C829E12F0491560080DF4A /* ContentView.swift in Sources */,
 				A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */,
@@ -416,6 +439,7 @@
 				A0387B092F18559C007F9146 /* ReachabilityManager.swift in Sources */,
 				A0C63AEC2F12B2800092621B /* KeychainError.swift in Sources */,
 				A07C30EC2F15DE5200720BA1 /* LoginViewModel.swift in Sources */,
+				A0387B4D2F18D7FE007F9146 /* SettingsView.swift in Sources */,
 				A07C30F92F15E46F00720BA1 /* LoginRequest.swift in Sources */,
 				A07C30E82F15B61600720BA1 /* NetworkError.swift in Sources */,
 				A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */,
