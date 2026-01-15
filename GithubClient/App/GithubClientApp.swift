@@ -9,17 +9,22 @@ import SwiftUI
 
 @main
 struct GithubClientApp: App {
-    private let keychainManager = KeychainManager()
     @State private var appState: AppState
-
+    private let appEvironment: AppEnvironment
+    
     init() {
-        _appState = State(initialValue: AppState(keychainManager: keychainManager))
+        let environment = AppEnvironment()
+        self.appEvironment = environment
+        
+        let hasCredentials = (try? environment.keychainManager.getCredentials()) != nil
+        _appState = State(initialValue: AppState(isAuthenticated: hasCredentials))
     }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(appState)
+                .environment(\.appEnvironment, appEvironment)
         }
     }
 }

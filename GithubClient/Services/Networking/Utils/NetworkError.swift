@@ -16,7 +16,14 @@ struct NetworkError: LocalizedError {
         message
     }
     
-    static let notReachable: Self = .init(status: "", errorCode: 404, message: "There is no internet connection.")
-    static let invalidResponse: Self = .init(status: "", errorCode: 404, message: "The response is invalid.")
-    static let emptyError: Self = .init(status: "", errorCode: 404, message: "Something went wrong.")
+    static let notReachable: Self = .init(
+        status: "notReachable", errorCode: 404, message: "There is no internet connection.")
+    static let unauthorized: Self = .init(
+        status: "unauthorized", errorCode: 401, message: "Unauthorized")
+    static let emptyError: Self = .init(
+        status: "emptyError", errorCode: 404, message: "Something went wrong, please try again later.")
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.status == rhs.status
+    }
 }

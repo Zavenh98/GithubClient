@@ -10,12 +10,11 @@ import Foundation
 extension NetworkManager {
     func validate<T>(_ request: T, _ data: Data, _ response: URLResponse) throws {
         guard let response = response as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
+            throw NetworkError.emptyError
         }
         
         if response.statusCode == 401 {
-            // TODO: - ???
-            return
+            throw NetworkError.unauthorized
         } else {
             guard 200..<300 ~= response.statusCode else {
                 guard

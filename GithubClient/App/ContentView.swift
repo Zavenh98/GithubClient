@@ -11,19 +11,29 @@ struct ContentView: View {
     @Environment(AppState.self) var appState
     
     var body: some View {
-        VStack {
+        return ZStack {
             switch appState.appFlow {
             case .login:
-                Text("Login Flow")
+                LoginContainerView(
+                    onLoginSuccess: { appState.appFlow = .main } )
             case .main:
-                Text("Main Flow")
+                ZStack {
+                    Color(.gray.opacity(0.2))
+                    
+                    Button("Logout") {
+                        appState.appFlow = .login
+                    }
+                }
+                .transition(.move(edge: .trailing))
             }
         }
-        .padding()
+        .background(.bgPrimary)
+        .ignoresSafeArea(.container)
+        .animation(.easeInOut(duration: 0.5), value: appState.appFlow)
     }
 }
 
 #Preview {
     ContentView()
-        .environment(AppState(keychainManager: KeychainManager()))
+        .environment(AppState(isAuthenticated: true))
 }
