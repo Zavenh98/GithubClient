@@ -25,26 +25,35 @@ class UIKitLoadingView: UIView {
     private func configureView() {
         isHidden = true
         
-        backgroundBlurView.frame = bounds
-        backgroundBlurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        backgroundBlurView.alpha = 0.5
+        // Background
         addSubview(backgroundBlurView)
+        backgroundBlurView.alpha = 0.5
+        backgroundBlurView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundBlurView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundBlurView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundBlurView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundBlurView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
         
+        // Indicator Background
+        addSubview(indicatorBackgroundView)
         indicatorBackgroundView.backgroundColor = .textDisabled
         indicatorBackgroundView.layer.cornerRadius = 20
         indicatorBackgroundView.layer.masksToBounds = true
         indicatorBackgroundView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(indicatorBackgroundView)
-
-        indicator.color = .brandMainPurple
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(indicator)
-
         NSLayoutConstraint.activate([
             indicatorBackgroundView.widthAnchor.constraint(equalToConstant: 100),
             indicatorBackgroundView.heightAnchor.constraint(equalToConstant: 100),
             indicatorBackgroundView.centerXAnchor.constraint(equalTo: backgroundBlurView.centerXAnchor),
             indicatorBackgroundView.centerYAnchor.constraint(equalTo: backgroundBlurView.centerYAnchor),
+        ])
+
+        // Indicator 
+        addSubview(indicator)
+        indicator.color = .brandMainPurple
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
             indicator.centerXAnchor.constraint(equalTo: indicatorBackgroundView.centerXAnchor),
             indicator.centerYAnchor.constraint(equalTo: indicatorBackgroundView.centerYAnchor)
         ])

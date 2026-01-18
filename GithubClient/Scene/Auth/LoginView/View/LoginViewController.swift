@@ -89,8 +89,14 @@ class LoginViewController: UIViewController {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
             view.addGestureRecognizer(tapGesture)
             
-            loadingView.frame = view.bounds
             view.addSubview(loadingView)
+            loadingView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                loadingView.topAnchor.constraint(equalTo: view.topAnchor),
+                loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
         }
     
     private func bindViewModel() {
