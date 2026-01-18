@@ -16,6 +16,7 @@ struct LoginContainerView: UIViewControllerRepresentable {
         let viewModel = LoginViewModel(
             authorizationManager: AuthorizationManager(
                 keychainManager: appEnvironment.keychainManager,
+                defaultsStorsageManager: appEnvironment.defaultsStorageManager,
                 networkManager: appEnvironment.networkManager))
         
         viewModel.onLoginSuccess = { onLoginSuccess() }

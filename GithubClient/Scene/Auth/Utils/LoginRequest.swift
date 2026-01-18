@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginRequest: NetworkRequest {
-    typealias Response = Void
+    typealias Response = LoginResponse
     
     let path: String = "/user"
     let method: NetworkRequestMethod = .get
@@ -19,4 +19,8 @@ struct LoginRequest: NetworkRequest {
         let base64Auth = Data(authString.utf8).base64EncodedString()
         self.headers = ["Authorization" : "Basic \(base64Auth)"]
     }
+}
+
+struct LoginResponse: Decodable {
+    let login: String
 }
