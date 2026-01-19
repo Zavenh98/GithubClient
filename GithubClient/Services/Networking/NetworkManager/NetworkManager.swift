@@ -25,6 +25,7 @@ final class NetworkManager: NetworkManagerInput {
     
     private lazy var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         return decoder
     }()
     

@@ -23,9 +23,9 @@ final class LoginViewModel {
 
     func signIn() {
         guard !login.isEmpty, !password.isEmpty else { return }
-
-        onChangedLoading?(true)
+        
         Task { @MainActor in
+            onChangedLoading?(true)
             do {
                 try await authorizationManager.logIn(with: Credentials(login: login, token: password))
                 onChangedLoading?(false)

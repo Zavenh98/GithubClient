@@ -12,7 +12,11 @@ struct MainFlowView: View {
     
     var body: some View {
         TabView {
-            MyRepositoriesView()
+            MyRepositoriesView(
+                viewModel: MyRepositoriesViewModel(
+                    myRepositoriesManager: MyRepositoriesManager(
+                        defaultsStorageManager: appEnvironment.defaultsStorageManager,
+                        networkManager: appEnvironment.networkManager)))
                 .tabItem {
                     Label("Repos", systemImage: "folder")
                 }
