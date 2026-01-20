@@ -38,8 +38,8 @@ struct MyRepositorycell: View {
     private var header: some View {
         HStack {
             RemoteAvatarView(
-                url: repository.owner.avatarUrl ?? "",
-                height: R.Sizes.Images.small)
+                url: repository.owner.avatarUrl ?? "")
+            .frame(height: R.Sizes.Images.small)
             
             Text(repository.owner.login)
                 .font(.callout)

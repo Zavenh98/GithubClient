@@ -21,7 +21,11 @@ struct MainFlowView: View {
                     Label("Repos", systemImage: "folder")
                 }
             
-            AllUsersView()
+            AllUsersView(
+                viewModel: AllUsersViewModel(
+                    allUsersManager: AllUsersManager(
+                        defaultsStorsageManager: appEnvironment.defaultsStorageManager,
+                        networkManager: appEnvironment.networkManager)))
                 .tabItem {
                     Label("Users", systemImage: "person.2")
                 }

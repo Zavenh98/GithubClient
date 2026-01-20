@@ -49,6 +49,8 @@ struct R {
         enum Images {
             /// 32
             static let small: CGFloat = 32
+            /// 48
+            static let regular: CGFloat = 48
         }
     }
 }
