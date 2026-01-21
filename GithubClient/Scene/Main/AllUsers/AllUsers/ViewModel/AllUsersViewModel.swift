@@ -13,11 +13,11 @@ final class AllUsersViewModel {
     
     var allUsers: [User] = []
     var loadingState: Loading = .none { didSet { print(loadingState) } }
+    let allUsersManager: AllUsersManagerInput
     private var lastUserID: Int? = nil
     private let perPage = 30
     private var moreItemsRemaining = true
     private var itemsLoadedCount: Int? = nil
-    private let allUsersManager: AllUsersManagerInput
     
     init(allUsersManager: AllUsersManagerInput) {
         self.allUsersManager = allUsersManager

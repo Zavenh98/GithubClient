@@ -24,7 +24,10 @@ struct AllUsersView: View {
                     viewModel.loadInitialUsers()
                 }
                 .navigationDestination(for: User.self) { user in
-                    UserDetaisView(user: user)
+                    UserDetaisView(
+                        viewModel: UserDetaisViewModel(
+                            user: user,
+                            allUsersManager: viewModel.allUsersManager))
                 }
         }
     }
@@ -53,7 +56,7 @@ extension AllUsersView {
                 ForEach(viewModel.allUsers) { user in
                     NavigationLink(value: user) {
                         HStack(spacing: R.Sizes.Offsets.Horizontal.regular) {
-                            RemoteAvatarView(url: user.avatarUrl ?? "")
+                            RemoteImage(urlString: user.avatarUrl ?? "", clipShape: .circle)
                                 .frame(height: R.Sizes.Images.regular)
                             Text(user.login)
                                 .font(.body.bold())
