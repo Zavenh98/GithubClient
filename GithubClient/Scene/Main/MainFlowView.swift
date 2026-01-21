@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainFlowView: View {
+    @Environment(\.appEnvironment) private var appEnvironment
     
     var body: some View {
         TabView {
@@ -26,7 +27,9 @@ struct MainFlowView: View {
                     Label("Music", systemImage: "music.note")
                 }
             
-            ProfileView()
+            ProfileView(
+                viewModel: ProfileViewModel(
+                    keychainmanager: appEnvironment.keychainManager))
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
