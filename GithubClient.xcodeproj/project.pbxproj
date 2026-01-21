@@ -30,6 +30,12 @@
 		A07C30F52F15E3AA00720BA1 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30F42F15E3AA00720BA1 /* AuthorizationManager.swift */; };
 		A07C30F92F15E46F00720BA1 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30F82F15E46F00720BA1 /* LoginRequest.swift */; };
 		A07C30FB2F160EFF00720BA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07C30FA2F160EFF00720BA1 /* LoginViewController.xib */; };
+		A0B028932F1C531D00973650 /* DefaultsStorageManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B028922F1C531D00973650 /* DefaultsStorageManagerInput.swift */; };
+		A0B028952F1C534600973650 /* DefaultsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B028942F1C534600973650 /* DefaultsStorageManager.swift */; };
+		A0B028972F1C536000973650 /* DefaultsStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B028962F1C536000973650 /* DefaultsStorageKey.swift */; };
+		A0B028992F1C539600973650 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B028982F1C539600973650 /* FileStorageManager.swift */; };
+		A0B0289D2F1C54B200973650 /* OnLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0289C2F1C54B200973650 /* OnLoadModifier.swift */; };
+		A0B0289F2F1C552300973650 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0289E2F1C552300973650 /* Image+Extensions.swift */; };
 		A0C63A162F09811C0092621B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A152F09811C0092621B /* AppState.swift */; };
 		A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A192F09821B0092621B /* AppFlow.swift */; };
 		A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A362F106CA10092621B /* KeychainManager.swift */; };
@@ -68,6 +74,12 @@
 		A07C30F42F15E3AA00720BA1 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		A07C30F82F15E46F00720BA1 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		A07C30FA2F160EFF00720BA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A0B028922F1C531D00973650 /* DefaultsStorageManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorageManagerInput.swift; sourceTree = "<group>"; };
+		A0B028942F1C534600973650 /* DefaultsStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorageManager.swift; sourceTree = "<group>"; };
+		A0B028962F1C536000973650 /* DefaultsStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorageKey.swift; sourceTree = "<group>"; };
+		A0B028982F1C539600973650 /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
+		A0B0289C2F1C54B200973650 /* OnLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnLoadModifier.swift; sourceTree = "<group>"; };
+		A0B0289E2F1C552300973650 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		A0C63A152F09811C0092621B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A0C63A192F09821B0092621B /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A0C63A362F106CA10092621B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -234,6 +246,41 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A0B028902F1C52DE00973650 /* FileStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B028982F1C539600973650 /* FileStorageManager.swift */,
+			);
+			path = FileStorageManager;
+			sourceTree = "<group>";
+		};
+		A0B028912F1C52ED00973650 /* DefaultsStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0B028922F1C531D00973650 /* DefaultsStorageManagerInput.swift */,
+				A0B028942F1C534600973650 /* DefaultsStorageManager.swift */,
+				A0B028962F1C536000973650 /* DefaultsStorageKey.swift */,
+			);
+			path = DefaultsStorageManager;
+			sourceTree = "<group>";
+		};
+		A0B0289A2F1C547500973650 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0B0289B2F1C549600973650 /* View+Extensions */,
+				A0B0289E2F1C552300973650 /* Image+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0B0289B2F1C549600973650 /* View+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0B0289C2F1C54B200973650 /* OnLoadModifier.swift */,
+			);
+			path = "View+Extensions";
+			sourceTree = "<group>";
+		};
 		A0C63A172F0981570092621B /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +337,8 @@
 		A0C63A352F106C850092621B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A0B028912F1C52ED00973650 /* DefaultsStorageManager */,
+				A0B028902F1C52DE00973650 /* FileStorageManager */,
 				A0C63AE62F12B0FE0092621B /* KeychainManager */,
 				A07C30D42F15B13400720BA1 /* Networking */,
 			);
@@ -312,6 +361,7 @@
 				A0C63A172F0981570092621B /* App */,
 				A0C63A352F106C850092621B /* Services */,
 				A0C63A1D2F09A3200092621B /* Scene */,
+				A0B0289A2F1C547500973650 /* Extensions */,
 				A0C829E62F0493310080DF4A /* Resources */,
 			);
 			path = GithubClient;
@@ -429,9 +479,11 @@
 				A0387B492F18CAF8007F9146 /* ProfileViewModel.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
 				A07C30EA2F15C04400720BA1 /* NetworkManager+Ext.swift in Sources */,
+				A0B028992F1C539600973650 /* FileStorageManager.swift in Sources */,
 				A0387B4F2F18D894007F9146 /* AppTheme.swift in Sources */,
 				A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */,
 				A0C829E12F0491560080DF4A /* ContentView.swift in Sources */,
+				A0B028932F1C531D00973650 /* DefaultsStorageManagerInput.swift in Sources */,
 				A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */,
 				A0387B062F18554B007F9146 /* ReachabilityManagerInput.swift in Sources */,
 				A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */,
@@ -445,11 +497,15 @@
 				A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */,
 				A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */,
 				A07C30F52F15E3AA00720BA1 /* AuthorizationManager.swift in Sources */,
+				A0B0289F2F1C552300973650 /* Image+Extensions.swift in Sources */,
+				A0B028972F1C536000973650 /* DefaultsStorageKey.swift in Sources */,
+				A0B0289D2F1C54B200973650 /* OnLoadModifier.swift in Sources */,
 				A0387B412F18C02E007F9146 /* MusicPlayerView.swift in Sources */,
 				A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */,
 				A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */,
 				A0387B3F2F18C012007F9146 /* AllUsersView.swift in Sources */,
 				A0387B0B2F1862EC007F9146 /* AppEnvironment.swift in Sources */,
+				A0B028952F1C534600973650 /* DefaultsStorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

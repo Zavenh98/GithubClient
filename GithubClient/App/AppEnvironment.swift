@@ -13,15 +13,21 @@ extension EnvironmentValues {
 
 final class AppEnvironment {
     let keychainManager: KeychainManagerInput
+    let defaultsStorageManager: DefaultsStorageManagerInput
+    let fileStoregeManager: FileStorageManager
     let networkManager: NetworkManagerInput
 
     init() {
         let keychainManager = KeychainManager()
+        let defaultsStorageManager = DefaultsStorageManager()
+        let fileStoregeManager = FileStorageManager()
         let reachabilityManager = ReachabilityManager()
         let networkManager = NetworkManager(
             keychainManager: keychainManager, reachablityManager: reachabilityManager)
         
         self.keychainManager = keychainManager
+        self.defaultsStorageManager = defaultsStorageManager
+        self.fileStoregeManager = fileStoregeManager
         self.networkManager = networkManager
     }
 }

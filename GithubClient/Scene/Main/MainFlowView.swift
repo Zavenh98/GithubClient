@@ -29,7 +29,9 @@ struct MainFlowView: View {
             
             ProfileView(
                 viewModel: ProfileViewModel(
-                    keychainmanager: appEnvironment.keychainManager))
+                    keychainManager: appEnvironment.keychainManager,
+                    defaultsManager: appEnvironment.defaultsStorageManager,
+                    fileStorageManager: appEnvironment.fileStoregeManager))
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
