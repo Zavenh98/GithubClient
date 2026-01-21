@@ -9,14 +9,11 @@ import SwiftUI
 
 struct RemoteAvatarView: View {
     private let url: String
-    private let height: CGFloat
     
     init(
         url: String,
-        height: CGFloat = R.Sizes.Images.small
     ) {
         self.url = url
-        self.height = height
     }
     
     var body: some View {
@@ -28,10 +25,9 @@ struct RemoteAvatarView: View {
                 .fitToAspectRatio()
         }
         .clipShape(.circle)
-        .frame(height: height)
     }
 }
 
 #Preview {
-    RemoteAvatarView(url: "https://hws.dev/img/logor.png")
+    RemoteAvatarView(url: "https://avatars.githubusercontent.com/u/2?v=4")
 }

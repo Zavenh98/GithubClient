@@ -30,6 +30,12 @@
 		A0560EF92F1E420100C9E4CC /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EF82F1E420100C9E4CC /* Bool+Extensions.swift */; };
 		A0560EFC2F1E69FC00C9E4CC /* RemoteAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EFB2F1E69FC00C9E4CC /* RemoteAvatarView.swift */; };
 		A0560EFF2F1E6F3A00C9E4CC /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EFE2F1E6F3A00C9E4CC /* R.swift */; };
+		A07408602F1F2D5E00CF6E6E /* AllUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074085F2F1F2D5E00CF6E6E /* AllUsersViewModel.swift */; };
+		A07408632F1F2DB700CF6E6E /* AllUsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408622F1F2DB700CF6E6E /* AllUsersManager.swift */; };
+		A07408652F1F511000CF6E6E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408642F1F511000CF6E6E /* User.swift */; };
+		A07408672F1F518800CF6E6E /* AllUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408662F1F518800CF6E6E /* AllUsersRequest.swift */; };
+		A074086A2F1FA21100CF6E6E /* UserDetaisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408692F1FA21100CF6E6E /* UserDetaisView.swift */; };
+		A07408702F20122900CF6E6E /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074086F2F20122900CF6E6E /* ActivityIndicatorView.swift */; };
 		A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */; };
 		A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */; };
 		A07C30DE2F15B3EE00720BA1 /* NetworkManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */; };
@@ -85,6 +91,12 @@
 		A0560EF82F1E420100C9E4CC /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		A0560EFB2F1E69FC00C9E4CC /* RemoteAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAvatarView.swift; sourceTree = "<group>"; };
 		A0560EFE2F1E6F3A00C9E4CC /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		A074085F2F1F2D5E00CF6E6E /* AllUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewModel.swift; sourceTree = "<group>"; };
+		A07408622F1F2DB700CF6E6E /* AllUsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersManager.swift; sourceTree = "<group>"; };
+		A07408642F1F511000CF6E6E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A07408662F1F518800CF6E6E /* AllUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersRequest.swift; sourceTree = "<group>"; };
+		A07408692F1FA21100CF6E6E /* UserDetaisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetaisView.swift; sourceTree = "<group>"; };
+		A074086F2F20122900CF6E6E /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		A07C30D92F15B1E800720BA1 /* NetworkRequest+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Ext.swift"; sourceTree = "<group>"; };
 		A07C30DB2F15B20200720BA1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		A07C30DD2F15B3EE00720BA1 /* NetworkManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerInput.swift; sourceTree = "<group>"; };
@@ -174,7 +186,6 @@
 		A0387B382F18BF46007F9146 /* MyRepositories */ = {
 			isa = PBXGroup;
 			children = (
-				A0560EE22F1D5CF600C9E4CC /* Model */,
 				A0560EE82F1D608900C9E4CC /* MyRepositories */,
 				A0560EE52F1D5D4F00C9E4CC /* Utils */,
 			);
@@ -184,7 +195,9 @@
 		A0387B3B2F18BFA3007F9146 /* AllUsers */ = {
 			isa = PBXGroup;
 			children = (
-				A0387B3E2F18C012007F9146 /* AllUsersView.swift */,
+				A07408682F1FA1F900CF6E6E /* UserDetails */,
+				A074085B2F1F2CCB00CF6E6E /* AllUsers */,
+				A07408612F1F2DA500CF6E6E /* Utils */,
 			);
 			path = AllUsers;
 			sourceTree = "<group>";
@@ -244,6 +257,7 @@
 		A0560EE82F1D608900C9E4CC /* MyRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				A0560EE22F1D5CF600C9E4CC /* Model */,
 				A0560EF12F1E418700C9E4CC /* ViewModel */,
 				A0560EFA2F1E426E00C9E4CC /* View */,
 			);
@@ -264,6 +278,7 @@
 			children = (
 				A0560EED2F1D815C00C9E4CC /* NothingFoundView.swift */,
 				A0560EFB2F1E69FC00C9E4CC /* RemoteAvatarView.swift */,
+				A074086F2F20122900CF6E6E /* ActivityIndicatorView.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -291,6 +306,57 @@
 				A0560EFE2F1E6F3A00C9E4CC /* R.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A074085B2F1F2CCB00CF6E6E /* AllUsers */ = {
+			isa = PBXGroup;
+			children = (
+				A074085E2F1F2D3400CF6E6E /* Model */,
+				A074085D2F1F2D2900CF6E6E /* ViewModel */,
+				A074085C2F1F2D1E00CF6E6E /* View */,
+			);
+			path = AllUsers;
+			sourceTree = "<group>";
+		};
+		A074085C2F1F2D1E00CF6E6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B3E2F18C012007F9146 /* AllUsersView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A074085D2F1F2D2900CF6E6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A074085F2F1F2D5E00CF6E6E /* AllUsersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A074085E2F1F2D3400CF6E6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A07408642F1F511000CF6E6E /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A07408612F1F2DA500CF6E6E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A07408662F1F518800CF6E6E /* AllUsersRequest.swift */,
+				A07408622F1F2DB700CF6E6E /* AllUsersManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A07408682F1FA1F900CF6E6E /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A07408692F1FA21100CF6E6E /* UserDetaisView.swift */,
+			);
+			path = UserDetails;
 			sourceTree = "<group>";
 		};
 		A07C30D42F15B13400720BA1 /* Networking */ = {
@@ -569,6 +635,8 @@
 			files = (
 				A07C30EE2F15DEE300720BA1 /* LoginViewController.swift in Sources */,
 				A0560EF52F1E41CC00C9E4CC /* Date+Extensions.swift in Sources */,
+				A07408632F1F2DB700CF6E6E /* AllUsersManager.swift in Sources */,
+				A074086A2F1FA21100CF6E6E /* UserDetaisView.swift in Sources */,
 				A0560EE12F1D5CCE00C9E4CC /* MyRepositoriesViewModel.swift in Sources */,
 				A0387B432F18C03C007F9146 /* ProfileView.swift in Sources */,
 				A0560EE72F1D5D9B00C9E4CC /* MyRepositoriesRequest.swift in Sources */,
@@ -577,6 +645,7 @@
 				A0387B372F18BF3C007F9146 /* MainFlowView.swift in Sources */,
 				A0387AFE2F18067F007F9146 /* UIKitLoadingView.swift in Sources */,
 				A0387B492F18CAF8007F9146 /* ProfileViewModel.swift in Sources */,
+				A07408702F20122900CF6E6E /* ActivityIndicatorView.swift in Sources */,
 				A0560EF92F1E420100C9E4CC /* Bool+Extensions.swift in Sources */,
 				A0560EFC2F1E69FC00C9E4CC /* RemoteAvatarView.swift in Sources */,
 				A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */,
@@ -592,7 +661,9 @@
 				A0C829E12F0491560080DF4A /* ContentView.swift in Sources */,
 				A0B028932F1C531D00973650 /* DefaultsStorageManagerInput.swift in Sources */,
 				A0C63AEA2F12B1F50092621B /* Credentials.swift in Sources */,
+				A07408602F1F2D5E00CF6E6E /* AllUsersViewModel.swift in Sources */,
 				A0387B062F18554B007F9146 /* ReachabilityManagerInput.swift in Sources */,
+				A07408652F1F511000CF6E6E /* User.swift in Sources */,
 				A07C30DC2F15B20200720BA1 /* NetworkRequest.swift in Sources */,
 				A0387B3A2F18BF78007F9146 /* MyRepositoriesView.swift in Sources */,
 				A0387B092F18559C007F9146 /* ReachabilityManager.swift in Sources */,
@@ -604,6 +675,7 @@
 				A0C63AE82F12B1160092621B /* KeychainManagerInput.swift in Sources */,
 				A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */,
 				A0560EF32F1E419200C9E4CC /* RepositoryPrivacy.swift in Sources */,
+				A07408672F1F518800CF6E6E /* AllUsersRequest.swift in Sources */,
 				A07C30F52F15E3AA00720BA1 /* AuthorizationManager.swift in Sources */,
 				A0B0289F2F1C552300973650 /* Image+Extensions.swift in Sources */,
 				A0B028972F1C536000973650 /* DefaultsStorageKey.swift in Sources */,

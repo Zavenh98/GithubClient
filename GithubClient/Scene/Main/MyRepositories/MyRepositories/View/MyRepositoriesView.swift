@@ -18,12 +18,12 @@ struct MyRepositoriesView: View {
     var body: some View {
         NavigationStack {
             content
-            .background(.bgPrimary)
-            .navigationTitle("My Repositories")
-            .navigationBarTitleDisplayMode(.large)
-            .onLoad {
-                viewModel.loadInitialRepositories()
-            }
+                .background(.bgPrimary)
+                .navigationTitle("My Repositories")
+                .navigationBarTitleDisplayMode(.large)
+                .onLoad {
+                    viewModel.loadInitialRepositories()
+                }
         }
     }
 }
