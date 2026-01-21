@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkError: LocalizedError {
+struct NetworkError: LocalizedError, Equatable {
     let status: String
     let errorCode: Int
     let message: String
