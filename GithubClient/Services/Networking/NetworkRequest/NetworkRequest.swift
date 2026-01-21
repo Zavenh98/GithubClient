@@ -17,7 +17,7 @@ enum NetworkRequestMethod: String {
 
 
 protocol NetworkRequest {
-    associatedtype Response
+    associatedtype Response = [String: Any]
     
     var path: String { get }
     var method: NetworkRequestMethod { get }

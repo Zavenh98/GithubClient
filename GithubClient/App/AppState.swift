@@ -11,7 +11,7 @@ import Foundation
 final class AppState {
     var appFlow: AppFlow
     
-    init(keychainManager: KeychainManagerInput) {
-        self.appFlow = (try? keychainManager.getCredentials()) == nil ? .login : .main
+    init(isAuthenticated: Bool) {
+        self.appFlow = isAuthenticated ? .main : .login
     }
 }
