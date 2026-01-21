@@ -26,6 +26,13 @@ struct ContentView: View {
         .ignoresSafeArea(.container)
         .animation(.easeInOut(duration: 0.5), value: appState.appFlow)
         .preferredColorScheme(appTheme.colorScheme)
+        .onAppear {
+            configureAppearance()
+        }
+    }
+    
+    private func configureAppearance() {
+        UIRefreshControl.appearance().tintColor = UIColor(.brandMainPurple)
     }
 }
 

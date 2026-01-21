@@ -10,4 +10,5 @@ import Foundation
 enum DefaultsStorageKey: String, CaseIterable {
     case profilePictureFileName
     case currentUserUsername
+    case myRepositoriesCache
 }

@@ -19,7 +19,7 @@ struct NetworkError: LocalizedError, Equatable {
     static let notReachable: Self = .init(
         status: "notReachable", errorCode: 404, message: "There is no internet connection.")
     static let unauthorized: Self = .init(
-        status: "unauthorized", errorCode: 401, message: "Unauthorized")
+        status: "unauthorized", errorCode: 401, message: "Unauthorized request")
     static let emptyError: Self = .init(
         status: "emptyError", errorCode: 404, message: "Something went wrong, please try again later.")
     
