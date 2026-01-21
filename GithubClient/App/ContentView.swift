@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(AppState.self) var appState
+    @AppStorage("appTheme") var appTheme = AppTheme.system
     
     var body: some View {
         ZStack {
@@ -24,6 +25,7 @@ struct ContentView: View {
         .background(.bgPrimary)
         .ignoresSafeArea(.container)
         .animation(.easeInOut(duration: 0.5), value: appState.appFlow)
+        .preferredColorScheme(appTheme.colorScheme)
     }
 }
 
