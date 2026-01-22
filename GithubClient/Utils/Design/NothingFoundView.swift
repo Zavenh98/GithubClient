@@ -18,6 +18,7 @@ struct NothingFoundView: View {
         Text(text)
             .font(.title)
             .foregroundStyle(.textPrimary)
+            .multilineTextAlignment(.center)
     }
 }
 

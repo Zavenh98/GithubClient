@@ -10,6 +10,7 @@ import Foundation
 protocol AllUsersManagerInput {
     func fetchUsers(since: Int?, perPage: Int) async throws -> [User]
     func loadCachedUsers() -> [User]
+    func fetchUserRepos(username: String) async throws -> [Repository]
 }
 
 class AllUsersManager: AllUsersManagerInput {
@@ -40,5 +41,10 @@ class AllUsersManager: AllUsersManagerInput {
     
     private func cacheUsers(_ users: [User]) throws {
         try defaultsStorageManager.setObject(users, for: .allUsersCache)
+    }
+    
+    func fetchUserRepos(username: String) async throws -> [Repository] {
+        let request = UserDetailsRequest(username: username)
+        return try await networkManager.request(request).map { Repository(dto: $0)}
     }
 }

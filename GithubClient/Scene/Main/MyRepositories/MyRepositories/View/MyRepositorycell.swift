@@ -37,8 +37,9 @@ struct MyRepositorycell: View {
     
     private var header: some View {
         HStack {
-            RemoteAvatarView(
-                url: repository.owner.avatarUrl ?? "")
+            RemoteImage(
+                urlString: repository.owner.avatarUrl ?? "",
+                clipShape: .circle)
             .frame(height: R.Sizes.Images.small)
             
             Text(repository.owner.login)
