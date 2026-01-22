@@ -25,6 +25,10 @@ actor FileStorageManager {
 
     func saveData(_ data: Data, at path: String) throws {
         let fileURL = url(for: path)
+        
+        let directoryURL = fileURL.deletingLastPathComponent()
+        try fileManager.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        
         try data.write(to: fileURL, options: [.atomic])
     }
 
