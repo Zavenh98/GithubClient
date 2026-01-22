@@ -53,8 +53,12 @@ final class ProfileViewModel {
         guard let path: String = defaultsManager.string(for: .profilePictureFileName) else { return }
 
         Task {
-            let data = try await fileStorageManager.loadData(from: path)
-            avatarImage = UIImage(data: data)
+            do {
+                let data = try await fileStorageManager.loadData(from: path)
+                avatarImage = UIImage(data: data)
+            } catch {
+                print("Loading avatar failed:", error)
+            }
         }
     }
     
