@@ -30,7 +30,9 @@ struct MainFlowView: View {
                     Label("Users", systemImage: "person.2")
                 }
             
-            MusicPlayerView()
+            MusicPlayerView(
+                viewModel: MusicPlayerViewModel(
+                    audioFileManager: appEnvironment.audioFileManager))
                 .tabItem {
                     Label("Music", systemImage: "music.note")
                 }

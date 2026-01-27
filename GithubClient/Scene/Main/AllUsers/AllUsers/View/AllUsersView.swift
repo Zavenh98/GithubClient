@@ -55,9 +55,9 @@ extension AllUsersView {
             Section {
                 ForEach(viewModel.allUsers) { user in
                     NavigationLink(value: user) {
-                        HStack(spacing: R.Sizes.Offsets.Horizontal.regular) {
+                        HStack(spacing: R.Offsets.common) {
                             RemoteImage(urlString: user.avatarUrl ?? "", clipShape: .circle)
-                                .frame(height: R.Sizes.Images.regular)
+                                .frame(height: R.Images.regular)
                             Text(user.login)
                                 .font(.body.bold())
                         }
