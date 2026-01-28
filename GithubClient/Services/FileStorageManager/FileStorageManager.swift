@@ -44,3 +44,34 @@ actor FileStorageManager {
         try fileManager.removeItem(at: fileURL)
     }
 }
+
+
+extension FileStorageManager {
+    func copyItemFromURL(_ fileURL: URL, to path: String) throws -> URL {
+        let destinationURL = url(for: path)
+        
+        let directoryURL = destinationURL.deletingLastPathComponent()
+        try fileManager.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        
+        if fileManager.fileExists(atPath: destinationURL.path) {
+            return destinationURL
+        }
+        
+        try fileManager.copyItem(at: fileURL, to: destinationURL)
+        return destinationURL
+    }
+
+    func loadURLs(in folderPath: String) throws -> [URL] {
+        let folderURL = url(for: folderPath)
+
+        guard fileManager.fileExists(atPath: folderURL.path) else {
+            return []
+        }
+
+        return try fileManager.contentsOfDirectory(
+            at: folderURL,
+            includingPropertiesForKeys: nil,
+            options: [.skipsHiddenFiles]
+        )
+    }
+}

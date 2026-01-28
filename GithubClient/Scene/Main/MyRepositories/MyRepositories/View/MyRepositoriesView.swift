@@ -45,7 +45,7 @@ extension MyRepositoriesView {
     private var listContent: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                LazyVStack(spacing: R.Sizes.Offsets.Vertical.small) {
+                LazyVStack(spacing: R.Offsets.commonMinus) {
                     ForEach(viewModel.repositories) { repo in
                         MyRepositorycell(repository: repo)
                             .onAppear { viewModel.loadMoreRepositoriesIfNeeded(

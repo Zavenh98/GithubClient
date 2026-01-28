@@ -30,6 +30,12 @@
 		A0560EF92F1E420100C9E4CC /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EF82F1E420100C9E4CC /* Bool+Extensions.swift */; };
 		A0560EFC2F1E69FC00C9E4CC /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EFB2F1E69FC00C9E4CC /* RemoteImage.swift */; };
 		A0560EFF2F1E6F3A00C9E4CC /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0560EFE2F1E6F3A00C9E4CC /* R.swift */; };
+		A05C6B4B2F278222002DA56B /* AudioFileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B4A2F278222002DA56B /* AudioFileItem.swift */; };
+		A05C6B4E2F27B9BD002DA56B /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B4D2F27B9BD002DA56B /* Int+Extensions.swift */; };
+		A05C6B502F27C51A002DA56B /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B4F2F27C51A002DA56B /* AudioCell.swift */; };
+		A05C6B542F27C5D3002DA56B /* ArtworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B532F27C5D3002DA56B /* ArtworkImage.swift */; };
+		A05C6B562F27CCC8002DA56B /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B552F27CCC8002DA56B /* TimeInterval+Extensions.swift */; };
+		A05CDC962F28EDD7002E35D0 /* AudioFileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CDC952F28EDD7002E35D0 /* AudioFileError.swift */; };
 		A07408602F1F2D5E00CF6E6E /* AllUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074085F2F1F2D5E00CF6E6E /* AllUsersViewModel.swift */; };
 		A07408632F1F2DB700CF6E6E /* AllUsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408622F1F2DB700CF6E6E /* AllUsersManager.swift */; };
 		A07408652F1F511000CF6E6E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07408642F1F511000CF6E6E /* User.swift */; };
@@ -57,6 +63,8 @@
 		A0B028992F1C539600973650 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B028982F1C539600973650 /* FileStorageManager.swift */; };
 		A0B0289D2F1C54B200973650 /* OnLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0289C2F1C54B200973650 /* OnLoadModifier.swift */; };
 		A0B0289F2F1C552300973650 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B0289E2F1C552300973650 /* Image+Extensions.swift */; };
+		A0C4404D2F2679E70079E46F /* MusicPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4404C2F2679E70079E46F /* MusicPlayerViewModel.swift */; };
+		A0C4404F2F267A330079E46F /* AudioFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4404E2F267A330079E46F /* AudioFileManager.swift */; };
 		A0C63A162F09811C0092621B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A152F09811C0092621B /* AppState.swift */; };
 		A0C63A1A2F09821B0092621B /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A192F09821B0092621B /* AppFlow.swift */; };
 		A0C63A372F106CA10092621B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C63A362F106CA10092621B /* KeychainManager.swift */; };
@@ -95,6 +103,13 @@
 		A0560EF82F1E420100C9E4CC /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
 		A0560EFB2F1E69FC00C9E4CC /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		A0560EFE2F1E6F3A00C9E4CC /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		A05C6B4A2F278222002DA56B /* AudioFileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileItem.swift; sourceTree = "<group>"; };
+		A05C6B4C2F27AAAE002DA56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A05C6B4D2F27B9BD002DA56B /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		A05C6B4F2F27C51A002DA56B /* AudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
+		A05C6B532F27C5D3002DA56B /* ArtworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImage.swift; sourceTree = "<group>"; };
+		A05C6B552F27CCC8002DA56B /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		A05CDC952F28EDD7002E35D0 /* AudioFileError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileError.swift; sourceTree = "<group>"; };
 		A074085F2F1F2D5E00CF6E6E /* AllUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewModel.swift; sourceTree = "<group>"; };
 		A07408622F1F2DB700CF6E6E /* AllUsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersManager.swift; sourceTree = "<group>"; };
 		A07408642F1F511000CF6E6E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -122,6 +137,8 @@
 		A0B028982F1C539600973650 /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		A0B0289C2F1C54B200973650 /* OnLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnLoadModifier.swift; sourceTree = "<group>"; };
 		A0B0289E2F1C552300973650 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		A0C4404C2F2679E70079E46F /* MusicPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewModel.swift; sourceTree = "<group>"; };
+		A0C4404E2F267A330079E46F /* AudioFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileManager.swift; sourceTree = "<group>"; };
 		A0C63A152F09811C0092621B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A0C63A192F09821B0092621B /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A0C63A362F106CA10092621B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -213,7 +230,10 @@
 		A0387B3C2F18BFB4007F9146 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A0387B402F18C02E007F9146 /* MusicPlayerView.swift */,
+				A05C6B572F27E40F002DA56B /* Model */,
+				A05C6B582F27E416002DA56B /* ViewModel */,
+				A05C6B512F27C5AE002DA56B /* View */,
+				A05C6B592F280197002DA56B /* Utils */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -316,6 +336,49 @@
 				A0560EFE2F1E6F3A00C9E4CC /* R.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A05C6B512F27C5AE002DA56B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0387B402F18C02E007F9146 /* MusicPlayerView.swift */,
+				A05C6B522F27C5B7002DA56B /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A05C6B522F27C5B7002DA56B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A05C6B4F2F27C51A002DA56B /* AudioCell.swift */,
+				A05C6B532F27C5D3002DA56B /* ArtworkImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A05C6B572F27E40F002DA56B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A05C6B4A2F278222002DA56B /* AudioFileItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A05C6B582F27E416002DA56B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0C4404C2F2679E70079E46F /* MusicPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A05C6B592F280197002DA56B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0C4404E2F267A330079E46F /* AudioFileManager.swift */,
+				A05CDC952F28EDD7002E35D0 /* AudioFileError.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A074085B2F1F2CCB00CF6E6E /* AllUsers */ = {
@@ -459,6 +522,8 @@
 				A0B0289E2F1C552300973650 /* Image+Extensions.swift */,
 				A0560EF42F1E41CC00C9E4CC /* Date+Extensions.swift */,
 				A0560EF82F1E420100C9E4CC /* Bool+Extensions.swift */,
+				A05C6B4D2F27B9BD002DA56B /* Int+Extensions.swift */,
+				A05C6B552F27CCC8002DA56B /* TimeInterval+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +539,7 @@
 		A0C63A172F0981570092621B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				A05C6B4C2F27AAAE002DA56B /* Info.plist */,
 				A0C63A182F0981E00092621B /* Model */,
 				A0C829DF2F0491560080DF4A /* GithubClientApp.swift */,
 				A0387B0A2F1862EC007F9146 /* AppEnvironment.swift */,
@@ -664,6 +730,9 @@
 				A07C30EE2F15DEE300720BA1 /* LoginViewController.swift in Sources */,
 				A0560EF52F1E41CC00C9E4CC /* Date+Extensions.swift in Sources */,
 				A07408632F1F2DB700CF6E6E /* AllUsersManager.swift in Sources */,
+				A05C6B4B2F278222002DA56B /* AudioFileItem.swift in Sources */,
+				A05CDC962F28EDD7002E35D0 /* AudioFileError.swift in Sources */,
+				A05C6B4E2F27B9BD002DA56B /* Int+Extensions.swift in Sources */,
 				A074086A2F1FA21100CF6E6E /* UserDetaisView.swift in Sources */,
 				A0560EE12F1D5CCE00C9E4CC /* MyRepositoriesViewModel.swift in Sources */,
 				A0387B432F18C03C007F9146 /* ProfileView.swift in Sources */,
@@ -698,6 +767,8 @@
 				A0387B3A2F18BF78007F9146 /* MyRepositoriesView.swift in Sources */,
 				A0387B092F18559C007F9146 /* ReachabilityManager.swift in Sources */,
 				A0C63AEC2F12B2800092621B /* KeychainError.swift in Sources */,
+				A05C6B562F27CCC8002DA56B /* TimeInterval+Extensions.swift in Sources */,
+				A0C4404F2F267A330079E46F /* AudioFileManager.swift in Sources */,
 				A07C30EC2F15DE5200720BA1 /* LoginViewModel.swift in Sources */,
 				A0387B4D2F18D7FE007F9146 /* SettingsView.swift in Sources */,
 				A07C30F92F15E46F00720BA1 /* LoginRequest.swift in Sources */,
@@ -711,13 +782,16 @@
 				A0B028972F1C536000973650 /* DefaultsStorageKey.swift in Sources */,
 				A0B0289D2F1C54B200973650 /* OnLoadModifier.swift in Sources */,
 				A07408782F213ED000CF6E6E /* PinchPanGestureOverlay.swift in Sources */,
+				A05C6B542F27C5D3002DA56B /* ArtworkImage.swift in Sources */,
 				A0387B412F18C02E007F9146 /* MusicPlayerView.swift in Sources */,
+				A05C6B502F27C51A002DA56B /* AudioCell.swift in Sources */,
 				A0C829E22F0491560080DF4A /* GithubClientApp.swift in Sources */,
 				A07C30DA2F15B1E800720BA1 /* NetworkRequest+Ext.swift in Sources */,
 				A0387B3F2F18C012007F9146 /* AllUsersView.swift in Sources */,
 				A0387B0B2F1862EC007F9146 /* AppEnvironment.swift in Sources */,
 				A0B028952F1C534600973650 /* DefaultsStorageManager.swift in Sources */,
 				A074087A2F21460300CF6E6E /* PinchPanRemoteImage.swift in Sources */,
+				A0C4404D2F2679E70079E46F /* MusicPlayerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +929,8 @@
 				DEVELOPMENT_TEAM = WNKKZ8JPHJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GithubClient/App/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -889,6 +965,8 @@
 				DEVELOPMENT_TEAM = WNKKZ8JPHJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GithubClient/App/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

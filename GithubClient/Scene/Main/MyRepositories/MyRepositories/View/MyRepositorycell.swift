@@ -12,7 +12,7 @@ struct MyRepositorycell: View {
     let repository: Repository
     
     var body: some View {
-        VStack(spacing: R.Sizes.Offsets.Vertical.small) {
+        VStack(spacing: R.Offsets.commonMinus) {
             header
             repositoryName
             
@@ -23,10 +23,10 @@ struct MyRepositorycell: View {
         .padding()
         .clipped()
         .background {
-            RoundedRectangle(cornerRadius: R.Sizes.Corners.regular)
+            RoundedRectangle(cornerRadius: R.Corners.regular)
                 .fill(.bgSecondary)
                 .shadow(color: .brandMainPurple.opacity(0.08),
-                        radius: R.Sizes.Corners.small)
+                        radius: R.Corners.small)
         }
         .onTapGesture {
             withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
@@ -40,7 +40,7 @@ struct MyRepositorycell: View {
             RemoteImage(
                 urlString: repository.owner.avatarUrl ?? "",
                 clipShape: .circle)
-            .frame(height: R.Sizes.Images.small)
+            .frame(height: R.Images.small)
             
             Text(repository.owner.login)
                 .font(.callout)
@@ -81,16 +81,16 @@ struct MyRepositorycell: View {
             Text(repository.privacyType.title)
                 .font(.caption2)
                 .foregroundStyle(.white)
-                .padding(.horizontal, R.Sizes.Offsets.Horizontal.small)
-                .padding(.vertical, R.Sizes.Offsets.Horizontal.extraSmall)
+                .padding(.horizontal, R.Offsets.commonMinus)
+                .padding(.vertical, R.Offsets.extraSmall)
                 .background {
                     Capsule().fill(repository.privacyType.color)
                 }
         }
         .padding(.horizontal)
-        .padding(.vertical, R.Sizes.Offsets.Vertical.small)
+        .padding(.vertical, R.Offsets.commonMinus)
         .background {
-            RoundedRectangle(cornerRadius: R.Sizes.Corners.small)
+            RoundedRectangle(cornerRadius: R.Corners.small)
                 .fill(.bgPrimary)
                 .stroke(.brandMainPurple.opacity(0.6))
         }
