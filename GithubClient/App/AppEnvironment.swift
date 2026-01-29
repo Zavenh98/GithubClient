@@ -17,6 +17,7 @@ final class AppEnvironment {
     let fileStoregeManager: FileStorageManager
     let networkManager: NetworkManagerInput
     let audioFileManager: AudioFileManagerInput
+    let audioPlaybackManager: AudioPlaybackManagerInput
 
     init() {
         let keychainManager = KeychainManager()
@@ -26,11 +27,13 @@ final class AppEnvironment {
         let networkManager = NetworkManager(
             keychainManager: keychainManager, reachablityManager: reachabilityManager)
         let audioFileManager = AudioFileManager(fileStorage: fileStoregeManager)
+        let audioPlaybackManager = AudioPlaybackManager()
         
         self.keychainManager = keychainManager
         self.defaultsStorageManager = defaultsStorageManager
         self.fileStoregeManager = fileStoregeManager
         self.networkManager = networkManager
         self.audioFileManager = audioFileManager
+        self.audioPlaybackManager = audioPlaybackManager
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct MusicPlayerView: View {
-    @State private var isShownImporter: Bool = false
+    @State private var isShownFileImporter: Bool = false
+    @State private var isExpandedNowPlaying: Bool = false
     @State private var viewModel: MusicPlayerViewModel
     
     init(viewModel: MusicPlayerViewModel) {
@@ -19,35 +20,46 @@ struct MusicPlayerView: View {
     var body: some View {
         NavigationStack {
             listContent
+                .overlay(alignment: .bottom) {
+                    if viewModel.currentAudio != nil {
+                        NowPlayingView(
+                            isExpanded: $isExpandedNowPlaying,
+                            viewModel: viewModel)
+                    }
+                }
                 .overlay(alignment: .top) {
-                    if viewModel.hasError && viewModel.errorMessage != "" {
+                    if viewModel.hasError && !viewModel.errorMessage.isEmpty {
                         toastBanner
                             .transition(.move(edge: .top).combined(with: .opacity))
                     }
                 }
                 .animation(.default, value: viewModel.hasError)
                 .navigationTitle("Music player")
+                .navigationBarTitleDisplayMode(.inline)
+            
             // Toolbar
                 .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Import") {
-                            isShownImporter = true
-                        }
-                        .fileImporter(
-                            isPresented: $isShownImporter,
-                            allowedContentTypes: [.audio, .mp3, .mpeg4Audio, .wav, .aiff],
-                            allowsMultipleSelection: true) { result in
-                                switch result {
-                                case .success(let urls):
-                                    viewModel.importURLs(urls)
-                                case .failure(let error):
-                                    print("Import failed:", error)
-                                }
+                    if !isExpandedNowPlaying {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Import") {
+                                isShownFileImporter = true
                             }
-                    }
-                    
-                    ToolbarItem(placement: .topBarLeading) {
-                        EditButton()
+                            .fileImporter(
+                                isPresented: $isShownFileImporter,
+                                allowedContentTypes: [.audio, .mp3, .mpeg4Audio, .wav, .aiff],
+                                allowsMultipleSelection: true) { result in
+                                    switch result {
+                                    case .success(let urls):
+                                        viewModel.importURLs(urls)
+                                    case .failure(let error):
+                                        print("Import failed:", error)
+                                    }
+                                }
+                        }
+                        
+                        ToolbarItem(placement: .topBarLeading) {
+                            EditButton()
+                        }
                     }
                 }
         }
@@ -87,7 +99,7 @@ extension MusicPlayerView {
                     Section("Cached Files") {
                         ForEach(viewModel.cachedAudioFiles) { audio in
                             Button {
-                                
+                                viewModel.playNewAudio(audioFile: audio)
                             } label: {
                                 AudioCell(audio: audio)
                                     .frame(height: 48)
@@ -128,5 +140,8 @@ extension MusicPlayerView {
     MusicPlayerView(
         viewModel: MusicPlayerViewModel(
             audioFileManager: AudioFileManager(
-                fileStorage: FileStorageManager())))
+                fileStorage: FileStorageManager()),
+            playbackManager: AudioPlaybackManager()
+        )
+    )
 }

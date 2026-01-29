@@ -17,7 +17,7 @@ struct R {
         static let commonMinus: CGFloat = 12
         /// 16
         static let common: CGFloat = 16
-        /// 16
+        /// 20
         static let commonPlus: CGFloat = 20
     }
         
