@@ -36,11 +36,7 @@ final class MusicPlayerViewModel {
     ) {
         self.audioFileManager = audioFileManager
         self.playbackManager = playbackManager
-        
-        self.playbackManager.onFinished = { [weak self] in
-            guard let self else { return }
-            self.playNext()
-        }
+        self.playbackManager.delegate = self
         
         Task { await getCachedAudioFiles() }
     }
@@ -48,6 +44,7 @@ final class MusicPlayerViewModel {
     // MARK: - Public methodes
     
     func playNewAudio(audioFile: AudioFileItem) {
+        guard currentAudio != audioFile else { return }
         self.setAudio(audioFile: audioFile)
         self.play()
     }
@@ -70,10 +67,8 @@ final class MusicPlayerViewModel {
         self.invalidateTimer()
         self.currentTime = 0
         
-        // Continue playing
-        if isPlaying {
-            play()
-        }
+        // Continue playing otherwise update nowPlaying
+        isPlaying ? play() : pause()
     }
     
     func playNext() {
@@ -91,10 +86,8 @@ final class MusicPlayerViewModel {
             return
         }
         
-        // Continue playing
-        if isPlaying {
-            play()
-        }
+        // Continue playing otherwise update nowPlaying
+        isPlaying ? play() : pause()
     }
     
     func beginSeekIfNeeded() {
@@ -114,16 +107,24 @@ final class MusicPlayerViewModel {
     
     // MARK: - Private methodes
     
-    private func play() {
+    fileprivate func play() {
         playbackManager.play()
         startTimer()
         isPlaying = true
+        
+        if let currentAudio {
+            playbackManager.updateNowPlaying(item: currentAudio, isPlaying: true, elapsed: currentTime)
+        }
     }
     
     private func pause() {
         playbackManager.pause()
         invalidateTimer()
         isPlaying = false
+        
+        if let currentAudio {
+            playbackManager.updateNowPlaying(item: currentAudio, isPlaying: false, elapsed: currentTime)
+        }
     }
     
     private func setAudio(audioFile: AudioFileItem) {
@@ -132,6 +133,8 @@ final class MusicPlayerViewModel {
         if let index = cachedAudioFiles.firstIndex(where: { $0 == currentAudio }) {
             self.lastPlayedIndex = index
         }
+        
+        playbackManager.updateNowPlaying(item: audioFile, isPlaying: isPlaying, elapsed: currentTime)
     }
     
     private func startTimer() {
@@ -141,6 +144,10 @@ final class MusicPlayerViewModel {
             DispatchQueue.main.async {
                 guard !self.isSeeking else { return }
                 self.currentTime = self.playbackManager.currentTime
+                
+                if let currentAudio = self.currentAudio {
+                    self.playbackManager.updateNowPlaying(item: currentAudio, isPlaying: self.isPlaying, elapsed: self.currentTime)
+                }
             }
         })
     }
@@ -210,4 +217,13 @@ extension MusicPlayerViewModel {
             cachedAudioFiles.remove(atOffsets: offsets)
         }
     }
+}
+
+// MARK: - AudioPlaybackManagerDelegate methodes
+extension MusicPlayerViewModel: AudioPlaybackManagerDelegate {
+    func playbackDidFinish() { playNext() }
+    func playbackDidReceivePlay() { play() }
+    func playbackDidReceivePause() { pause() }
+    func playbackDidReceivePrevious() { playPrevious() }
+    func playbackDidReceiveNext() { playNext() }
 }

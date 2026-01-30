@@ -16,16 +16,8 @@ struct ArtworkImage: View {
                 Image(uiImage: image)
                     .fitToAspectRatio()
             } else {
-                Rectangle()
-                    .fill(.gray)
-                    .aspectRatio(1, contentMode: .fit)
-                    .overlay(alignment: .bottom) {
-                        Image(systemName: "music.note")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.brandMainPurple)
-                            .scaleEffect(0.4)
-                    }
+                Image(.artworkPlaceholder)
+                    .fitToAspectRatio()
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: R.Corners.small))
