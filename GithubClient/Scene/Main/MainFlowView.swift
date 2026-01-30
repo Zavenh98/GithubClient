@@ -17,34 +17,35 @@ struct MainFlowView: View {
                     myRepositoriesManager: MyRepositoriesManager(
                         defaultsStorageManager: appEnvironment.defaultsStorageManager,
                         networkManager: appEnvironment.networkManager)))
-                .tabItem {
-                    Label("Repos", systemImage: "folder")
-                }
+            .tabItem {
+                Label("Repos", systemImage: "folder")
+            }
             
             AllUsersView(
                 viewModel: AllUsersViewModel(
                     allUsersManager: AllUsersManager(
                         defaultsStorsageManager: appEnvironment.defaultsStorageManager,
                         networkManager: appEnvironment.networkManager)))
-                .tabItem {
-                    Label("Users", systemImage: "person.2")
-                }
+            .tabItem {
+                Label("Users", systemImage: "person.2")
+            }
             
             MusicPlayerView(
                 viewModel: MusicPlayerViewModel(
-                    audioFileManager: appEnvironment.audioFileManager))
-                .tabItem {
-                    Label("Music", systemImage: "music.note")
-                }
+                    audioFileManager: appEnvironment.audioFileManager,
+                    playbackManager: appEnvironment.audioPlaybackManager))
+            .tabItem {
+                Label("Music", systemImage: "music.note")
+            }
             
             ProfileView(
                 viewModel: ProfileViewModel(
                     keychainManager: appEnvironment.keychainManager,
                     defaultsManager: appEnvironment.defaultsStorageManager,
                     fileStorageManager: appEnvironment.fileStoregeManager))
-                .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle")
-                }
+            .tabItem {
+                Label("Profile", systemImage: "person.crop.circle")
+            }
         }
         .tint(.brandMainPurple)
     }

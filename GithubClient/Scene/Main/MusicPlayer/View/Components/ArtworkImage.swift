@@ -17,18 +17,18 @@ struct ArtworkImage: View {
                     .fitToAspectRatio()
             } else {
                 Rectangle()
-                    .fill(.textDisabled)
+                    .fill(.gray)
                     .aspectRatio(1, contentMode: .fit)
                     .overlay(alignment: .bottom) {
                         Image(systemName: "music.note")
                             .resizable()
                             .scaledToFit()
                             .foregroundColor(.brandMainPurple)
-                            .scaleEffect(0.5)
+                            .scaleEffect(0.4)
                     }
             }
         }
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .clipShape(RoundedRectangle(cornerRadius: R.Corners.small))
     }
 }
 
