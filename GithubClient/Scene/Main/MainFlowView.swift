@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainFlowView: View {
     @Environment(\.appEnvironment) private var appEnvironment
+    let audioPlaybackManager: AudioPlaybackManagerInput = AudioPlaybackManager()
     
     var body: some View {
         TabView {
@@ -33,7 +34,7 @@ struct MainFlowView: View {
             MusicPlayerView(
                 viewModel: MusicPlayerViewModel(
                     audioFileManager: appEnvironment.audioFileManager,
-                    playbackManager: appEnvironment.audioPlaybackManager))
+                    playbackManager: audioPlaybackManager))
             .tabItem {
                 Label("Music", systemImage: "music.note")
             }
