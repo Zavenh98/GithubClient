@@ -23,24 +23,44 @@ struct ExpandedPlayingView: View {
             ZStack {
                 background
                 
-                VStack(spacing: R.Offsets.common) {
+                // Landscape state for iPhones
+                let isSmallHeight =  size.height < 500
+                
+                VStack(spacing: isSmallHeight ? 4 : R.Offsets.common) {
                     presentationIndicator
                         .offset(y: animateContent ? 0 : size.height)
                     
-                    artworkImage
-                    
-                    VStack(spacing: R.Offsets.common) {
-                        titleAndArtist
-                        timingSlider
-                        playbackControls(size: size)
-                        
+                    if isSmallHeight {
+                        HStack(spacing: R.Offsets.common) {
+                            artworkImage(isSmallScreen: true)
+                            
+                            VStack(spacing: 4) {
+                                titleAndArtist
+                                timingSlider
+                                playbackControls(height: size.height * 2.0)
+                            }
+                            .padding(.vertical, -40)
+                            .offset(y: animateContent ? 0 : size.height)
+                        }
+                    } else {
+                        VStack(spacing: R.Offsets.common) {
+                            artworkImage(isSmallScreen: false)
+                            
+                            VStack(spacing: R.Offsets.common) {
+                                titleAndArtist
+                                timingSlider
+                                playbackControls(height: size.height)
+                            }
+                            .padding(.horizontal, R.Offsets.commonPlus)
+                            .offset(y: animateContent ? 0 : size.height)
+                        }
                     }
-                    .padding(.horizontal, R.Offsets.commonPlus)
-                    .offset(y: animateContent ? 0 : size.height)
                 }
                 .padding(.top, safeArea.top + R.Offsets.small)
-                .padding(.bottom, safeArea.bottom + R.Offsets.commonPlus)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .padding(.bottom, safeArea.bottom + R.Offsets.common)
+                .padding(.leading, safeArea.leading)
+                .padding(.trailing, safeArea.trailing)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: isSmallHeight ? .center : .top)
             }
             .contentShape(Rectangle())
             .offset(y: offsetY)
@@ -86,13 +106,13 @@ extension ExpandedPlayingView {
             .opacity(animateContent ? 1 : 0)
     }
     
-    private var artworkImage: some View {
+    private func artworkImage(isSmallScreen: Bool) -> some View {
         ArtworkImage(image: viewModel.currentAudio?.artwork)
             .shadow(color: .black.opacity(0.15), radius: 6)
             .matchedGeometryEffect(
                 id: "artwork",
                 in: namespace)
-            .padding(viewModel.isPlaying ? 16 : 72)
+            .padding(viewModel.isPlaying ? (isSmallScreen ? 8 : 16) : (isSmallScreen ? 32 : 72))
             .padding(.horizontal, 12)
             .animation(.spring(response: 0.4, dampingFraction: 0.7), value: viewModel.isPlaying)
     }
@@ -104,7 +124,7 @@ extension ExpandedPlayingView {
                 .fontWeight(.semibold)
                 .foregroundStyle(.textPrimary)
             Text(viewModel.currentAudio?.artist ?? "Unknown artist")
-                .font(.body)
+                .font(.callout)
                 .foregroundStyle(.textSecondary)
         }
         .lineLimit(1)
@@ -132,23 +152,22 @@ extension ExpandedPlayingView {
         }
     }
     
-    private func  playbackControls(size: CGSize) -> some View {
+    private func  playbackControls(height: CGFloat) -> some View {
             HStack {
-                playbackControllButton(imageName: "backward.fill", height: size.height * 0.03) {
+                playbackControllButton(imageName: "backward.fill", height: height * 0.03) {
                     viewModel.playPrevious()
                 }
                 
-                playbackControllButton(imageName: viewModel.isPlaying ? "pause.fill" : "play.fill", height: size.height * 0.06) {
+                playbackControllButton(imageName: viewModel.isPlaying ? "pause.fill" : "play.fill", height: height * 0.06) {
                         viewModel.togglePlaying()
                 }
                 .offset(x: viewModel.isPlaying ? 0 : 3)
                 
-                playbackControllButton(imageName: "forward.fill", height: size.height * 0.03) {
+                playbackControllButton(imageName: "forward.fill", height: height * 0.03) {
                     viewModel.playNext()
                 }
             }
             .foregroundStyle(.textPrimary)
-//            .frame(maxHeight: .infinity)
     }
     
     private func playbackControllButton(imageName: String, height: CGFloat, action: @escaping () -> Void) -> some View {

@@ -109,6 +109,9 @@ extension MusicPlayerView {
                     }
                     .listRowBackground(Color.bgSecondary)
                 }
+                
+                Spacer()
+                    .listRowBackground(Color.clear)
             }
         }
         .scrollContentBackground(.hidden)
